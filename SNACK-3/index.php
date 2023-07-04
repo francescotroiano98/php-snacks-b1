@@ -1,13 +1,17 @@
 <?php 
     
 
-    function getArr() {
-        $letter = ['a','b','c','d','e'];
-        $number = [1,2,3,4,5];
-        return [$letter, $number];
+   
+        $letters = ['a','b','c','d','e'];
+        $numbers = [1,2,3,4,5];
+        $result = [];
+       
+      for ($i=0; $i < count($letters); $i++){
+
+        array_push($result, $letters[$i], $numbers[$i]);
+
       }
 
-    $newArray = getArr();
-    var_dump($newArray);  
+    var_dump($result);  
 
 ?>
