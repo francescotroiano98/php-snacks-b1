@@ -1,10 +1,10 @@
 <?php
     
-   function getNewnumbersarray($array, $a, $b){
+   function getNewnumbersarray($array, $minIndex, $maxIndex){
     $newArray = [];
 
-        if($a < $b && $b <= count($array)){
-            for($i = $a - 1; $i < $b; $i++){
+        if($minIndex < $maxIndex && $maxIndex <= count($array)){
+            for($i = $minIndex - 1; $i < $maxIndex; $i++){
                 $newArray[] = $array[$i];
             }
         }
@@ -12,9 +12,9 @@
    }
 
    $originalArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    $a = 2;
-    $b = 6;
-    $newArray = getNewNumbersArray($originalArray, $a, $b);
+    $minIndex = 2;
+    $maxIndex = 6;
+    $newArray = getNewNumbersArray($originalArray, $minIndex, $maxIndex);
     var_dump($newArray);
 
 ?>
